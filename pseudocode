@@ -1,0 +1,25 @@
+Pseudocode:
+
+Install inquirer and save a package.JSON
+
+BasicCard.js:
+  -Create constructor for basic cards with this.front and this.back
+  -create prototype to display the flash cards
+  -module.exports
+
+ClozeCard.js:
+  -Create constructor for cloze cards with full text, partial text, and cloze
+  -Create prototype to display the flash cards
+  -module.exports
+
+run.js:
+    -Prompt users to run one of four functions (create-basic, create-cloze, run-basic, run-cloze) and use a series of "if" statements to run different functions based on the selection.
+    -Create a read function to read the text files that will be created with card inputs using fs.readFile
+    -Create create function for new card info that will be input
+      -Use inquirer to prompt info for front and back for basic cards and full, partial, and cloze for cloze cards
+      -Capture inputs and push them into an array
+      -Write info (fs.writeFile) to a text file to be read later
+    -Make a display function that will display the appropriate card type based on the command line input
+      -For basic cards, display front and back
+      -For cloze cards, display only partial text.
+      
